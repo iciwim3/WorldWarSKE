@@ -12,10 +12,13 @@ class ViewController: UIViewController {
     
     @IBOutlet weak var leftCardImageView: UIImageView!
     @IBOutlet weak var leftCardScoreLabel: UILabel!
+    var leftScore = 0
     
     @IBOutlet weak var rightCardImageView: UIImageView!
     @IBOutlet weak var rightCardScoreLabel: UILabel!
+    var rightScore = 0
     
+    let cardNames = ["card2", "card3", "card4", "card5", "card6", "card7", "card8", "card9", "card10", "jack", "queen", "king", "ace"]
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -28,6 +31,34 @@ class ViewController: UIViewController {
     }
 
     @IBAction func dealButton(_ sender: UIButton) {
+        
+        // Randomize left card number
+        let leftNumber = Int(arc4random_uniform(13))
+        
+        // Assign left card image with random number
+        leftCardImageView.image = UIImage(named: cardNames[leftNumber])
+        
+        // Randomize right card number
+        let rightNumber = Int(arc4random_uniform(13))
+        
+        // Assign right card image with random number
+        rightCardImageView.image = UIImage(named: cardNames[rightNumber])
+        
+        // Determine score
+        if leftNumber > rightNumber {
+            // Increment left score
+            leftScore += 1
+            leftCardScoreLabel.text = String(leftScore)
+        }
+        else if leftNumber == rightNumber {
+            // It's a tie!
+        }
+        else {
+            // Increment right score
+            rightScore += 1
+            rightCardScoreLabel.text = String(rightScore)
+        }
+        
     }
 
 }
