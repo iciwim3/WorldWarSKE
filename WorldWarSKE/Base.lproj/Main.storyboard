@@ -65,6 +65,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dWb-sH-OtU">
                                         <rect key="frame" x="130.5" y="297" width="82" height="31"/>
                                         <state key="normal" image="dealbutton"/>
+                                        <connections>
+                                            <action selector="dealButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="tfk-p1-8hW"/>
+                                        </connections>
                                     </button>
                                     <stackView opaque="NO" contentMode="scaleToFill" alignment="top" spacing="100" translatesAutoresizingMaskIntoConstraints="NO" id="BA4-Hk-zJ1" userLabel="ScoreStackViews">
                                         <rect key="frame" x="73.5" y="358" width="196.5" height="289"/>
@@ -120,6 +123,12 @@
                             <constraint firstAttribute="trailingMargin" secondItem="5ct-pY-Fib" secondAttribute="trailing" id="wkU-iA-uTF"/>
                         </constraints>
                     </view>
+                    <connections>
+                        <outlet property="leftCardImageView" destination="rGe-mu-kmd" id="Hoz-T1-uO7"/>
+                        <outlet property="leftCardScoreLabel" destination="gM8-aV-N0L" id="kAY-Le-xaG"/>
+                        <outlet property="rightCardImageView" destination="rz4-k6-MZb" id="WOh-LS-Nd1"/>
+                        <outlet property="rightCardScoreLabel" destination="eId-KT-vhE" id="igC-HN-DKM"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>

@@ -9,6 +9,13 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    @IBOutlet weak var leftCardImageView: UIImageView!
+    @IBOutlet weak var leftCardScoreLabel: UILabel!
+    
+    @IBOutlet weak var rightCardImageView: UIImageView!
+    @IBOutlet weak var rightCardScoreLabel: UILabel!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -20,6 +27,8 @@ class ViewController: UIViewController {
         // Dispose of any resources that can be recreated.
     }
 
+    @IBAction func dealButton(_ sender: UIButton) {
+    }
 
 }
 
