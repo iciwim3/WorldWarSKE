@@ -59,7 +59,21 @@ class ViewController: UIViewController {
             rightCardScoreLabel.text = String(rightScore)
         }
         
+        // Add logic for winner and UIAlert
+        if leftScore == 20 || rightScore == 20 {
+            
+            let alertContrllr = UIAlertController(title: "Game Over", message: nil, preferredStyle: .alert)
+            let alertAction = UIAlertAction(title: "Start Over", style: .destructive)
+            
+            alertContrllr.addAction(alertAction)
+            self.present(alertContrllr, animated: true, completion: nil)
+            
+            leftScore = 0; rightScore = 0
+            
+            leftCardScoreLabel.text = String(leftScore); rightCardScoreLabel.text = String(rightScore)
+            
+        }
+        
     }
 
 }
-
